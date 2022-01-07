@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Button Effect</title>
+    <style>
+        .wrapper{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        button{
+            font: 2em sans-serif;
+            font-weight: bold;
+            padding: 20px 70px;
+            border-radius: 100px;
+            position: relative;
+            z-index: 1;
+            border:none;
+            background-color: rgb(255, 4, 142);
+            color:#fff;
+            transition: 0.5s;
+        }
+
+        button:before{
+            content: "";
+            width: 79%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: inherit;
+            margin: auto;
+            border-radius: 100px;
+            z-index: -1;
+            filter: blur(17px);
+            
+        }
+        button:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button>BUTTON</button>
+    </div>
+</body>
+</html>
